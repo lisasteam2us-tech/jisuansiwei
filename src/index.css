@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-3deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes chest-bounce {
+  0%, 100% { transform: scale(1) translateY(0); }
+  30% { transform: scale(1.06, 0.94) translateY(-4px); }
+  60% { transform: scale(0.96, 1.04) translateY(2px); }
+}
+
+.animate-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-chest {
+  animation: chest-bounce 2.5s ease-in-out infinite;
+}
